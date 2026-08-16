@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack Tax | v1.0</title>
+    <title>Snackulator | v1.0</title>
     
     <!-- Import Modern Font (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -245,16 +245,6 @@
             transform: translateX(2px);
         }
 
-        .footer-link.kofi-link:hover {
-            color: #ff5e5b; /* Ko-fi brand color */
-            text-shadow: 0 0 8px rgba(255, 94, 91, 0.4);
-        }
-
-        .footer-link.upi-link:hover {
-            color: var(--accent-emerald);
-            text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
-        }
-
         /* Fix text wrapping for long UPI IDs */
         .upi-container {
             position: relative;
@@ -266,89 +256,7 @@
             font-size: 11px; /* Dropped by 1px to fit the sidebar constraints */
         }
         
-        /* Glassmorphic QR Code Tooltip (Hidden by default) */
-        .qr-tooltip {
-            position: absolute;
-            bottom: 120%; /* Pops up above the link */
-            left: 0;
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-md);
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all var(--transition-smooth);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
-            z-index: 50;
-            pointer-events: none; /* Prevents flickering */
-        }
         
-        .qr-tooltip img {
-            border-radius: 8px;
-            width: 160px;
-            height: 160px;
-        }
-        
-        .qr-tooltip span {
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--accent-emerald);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Reveal tooltip on PC hover */
-        .upi-container:hover .qr-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .expand-qr-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px;
-            border-radius: 4px;
-            transition: all var(--transition-smooth);
-        }
-
-        .expand-qr-btn:hover {
-            color: var(--accent-emerald);
-            background: rgba(0, 255, 102, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            .sidebar {
-                top: auto; left: 0; right: 0; bottom: 0;
-                width: 100%; height: 80px;
-                border-radius: 20px 20px 0 0;
-                padding: 0 20px;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                gap: 0;
-            }
-            .logo { display: none; }
-            .sidebar-footer { display: none; }
-            .nav-links { flex-direction: row; width: 100%; justify-content: space-around; gap: 0;}
-            .nav-item { flex-direction: column; padding: 10px; font-size: 12px; gap: 6px; }
-            .nav-item:hover { transform: translateY(-2px); }
-            .main-content { margin-left: 0; width: 100%; padding: 24px 24px 100px 24px; }
-        }
-
         /* ========================================= */
         /* 4. TAB LAYOUTS                            */
         /* ========================================= */
@@ -1487,7 +1395,7 @@
     <nav class="sidebar">
         <div class="logo">
             <div class="logo-dot"></div>
-            Snack Tax
+            Snackulator
         </div>
         <div class="nav-links">
             <button class="nav-item active" data-tab="dashboard">
@@ -1510,26 +1418,20 @@
         
         <!-- Sidebar Footer -->
         <div class="sidebar-footer">
-            <div class="footer-title">Snack Tax v1.0.0</div>
+            <div class="footer-title">Snackulator v1.0.0</div>
             <div class="footer-links">
-                <a href="mailto:CosmicFlare25@proton.me" class="footer-link">✉️ CosmicFlare25</a>
-                <a href="https://github.com/CosmicDorito-25" target="_blank" rel="noopener noreferrer" class="footer-link">💻 GitHub Profile</a>
-                <a href="https://ko-fi.com/cosmicdorito#payment-widget" target="_blank" rel="noopener noreferrer" class="footer-link kofi-link">☕ Buy me a Coffee</a>
-                <div class="upi-container" style="display: flex; align-items: center; gap: 6px;">
-                    <a href="upi://pay?pa=vaishnav.flare25@okhdfcbank&pn=Snack%20Tax%20Developer&cu=INR" class="footer-link upi-link" title="Tap to open UPI app (Mobile only)">🇮🇳 UPI: vaishnav.flare25@okhdfcbank</a>
-                    
-                    <button onclick="window.openQrModal()" class="expand-qr-btn" title="Enlarge QR Code">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M9 21H3v-6"></path><path d="M21 3l-7 7"></path><path d="M3 21l7-7"></path></svg>
-                    </button>
-
-                    <div class="qr-tooltip">
-                        <img src="https://quickchart.io/qr?text=upi%3A%2F%2Fpay%3Fpa%3Dvaishnav.flare25%40okhdfcbank%26pn%3DSnack%2520Tax%2520Developer%26cu%3DINR&size=160&margin=1" alt="UPI QR Code">
-                        <span>Scan to pay</span>
-                    </div>
-                </div>
-            </div>
+                <a href="mailto:aastha.karn01@gmail.com" class="footer-link">
+                    ✉️ Gmail
+                </a>
+                <a href="https://github.com/acorn266"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link">
+                💻 GitHub Profile
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Main Content Sections -->
     <main class="main-content">
@@ -1539,7 +1441,7 @@
             <div class="overview-header-container">
                 <div class="overview-title-block">
                     <h2>Overview</h2>
-                    <p>Your daily metabolic snapshot.</p>
+                    <p>Your daily nutrition, at a glance.</p>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: center;">
                     <button id="edit-targets-btn" class="edit-targets-btn" onclick="openSettingsModal()">Edit Targets</button>
@@ -1548,8 +1450,12 @@
             
             <!-- Welcome Banner FTUE -->
             <div id="welcome-banner" class="welcome-banner">
-                <h3>Welcome to Snack Tax v1.0 🚀</h3>
-                <p>1. Set your targets.<br>2. Build your custom Food Library.<br>3. Log your daily intake to maintain your streak!</p>
+                <h3>Welcome to Snackulator 🥗</h3>
+                <p>
+                    1. Set your nutrition targets.<br>
+                    2. Add your favorite foods.<br>
+                    3. Log what you eat and watch your progress.
+                </p>
                 <button id="dismiss-welcome-btn" class="btn-secondary" style="width: auto; padding: 8px 16px; font-size: 13px;">Dismiss</button>
             </div>
 
@@ -1992,20 +1898,6 @@
         </div>
     </div>
 
-    <!-- Expanded QR Modal -->
-    <div id="qr-modal" class="modal-overlay">
-        <div class="modal-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 380px;">
-            <h2 style="margin-bottom: 8px; font-size: 24px; color: var(--accent-emerald);">Scan to Pay</h2>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 24px;">vaishnav.flare25@okhdfcbank</p>
-            
-            <div style="background: white; padding: 16px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(0, 255, 102, 0.2);">
-                <img src="https://quickchart.io/qr?text=upi%3A%2F%2Fpay%3Fpa%3Dvaishnav.flare25%40okhdfcbank%26pn%3DSnack%2520Tax%2520Developer%26cu%3DINR&size=300&margin=1" alt="Massive UPI QR Code" style="display: block; width: 300px; height: 300px;">
-            </div>
-            
-            <button type="button" class="btn-secondary" onclick="closeCustomModals()" style="width: 100%;">Close</button>
-        </div>
-    </div>
-
     <script>
         /* ========================================= */
         /* 1. STATE MANAGEMENT & INITIALIZATION      */
@@ -2225,7 +2117,6 @@
             document.getElementById('export-modal').classList.remove('active');
             document.getElementById('import-confirm-modal').classList.remove('active');
             document.getElementById('clear-data-modal').classList.remove('active');
-            document.getElementById('qr-modal').classList.remove('active');
             document.getElementById('edit-log-qty').value = ''; 
             pendingImportData = null; 
         };
@@ -3469,7 +3360,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `NutriTracker_Backup_${getLocalYYYYMMDD()}.json`;
+            a.download = `Snackulator_Backup_${getLocalYYYYMMDD()}.json`;
             a.click();
             URL.revokeObjectURL(url);
         }
@@ -3508,7 +3399,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `NutriTracker_Ledger_${getLocalYYYYMMDD()}.csv`;
+            a.download = `Snackulator_Ledger_${getLocalYYYYMMDD()}.csv`;
             a.click();
             URL.revokeObjectURL(url);
         }
@@ -3594,10 +3485,6 @@
             document.getElementById('btn-execute-clear').disabled = true;
             
             document.getElementById('clear-data-modal').classList.add('active');
-        };
-
-        window.openQrModal = function() {
-            document.getElementById('qr-modal').classList.add('active');
         };
 
         function setupClearDataLogic() {
