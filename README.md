@@ -59,11 +59,19 @@ No backend. No accounts. Just open and use.
 
 ### Run locally
 
+Clone the repository:
+
 ```bash
 git clone https://github.com/acorn266/Snackulator.git
 cd Snackulator
+```
+
+Then open `index.html` in your browser.
+
+That's it. 🍴
 
 ---
+
 ## 👩‍💻 Author
 
 **Aastha**
