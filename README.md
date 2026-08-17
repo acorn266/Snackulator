@@ -62,3 +62,12 @@ No backend. No accounts. Just open and use.
 ```bash
 git clone https://github.com/acorn266/Snackulator.git
 cd Snackulator
+
+---
+## 👩‍💻 Author
+
+**Aastha**
+
+---
+
+Built with ❤️
