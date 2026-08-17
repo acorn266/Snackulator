@@ -10,7 +10,11 @@ Snackulator is a simple, privacy-focused nutrition tracker for keeping track of 
 
 <!-- Add your screenshots here -->
 
-![Snackulator Dashboard](screenshots/dashboard.png)
+![Snackulator Dashboard]<img width="916" height="440" alt="Screenshot 2026-08-17 234520" src="https://github.com/user-attachments/assets/bba9547f-20bb-4c1a-9819-1f0589852580" />
+
+
+<img width="925" height="470" alt="Screenshot 2026-08-17 234555" src="https://github.com/user-attachments/assets/5eb248ab-2a00-4719-89d4-46e5e88d5a22" />
+
 
 <!-- Add more screenshots if needed -->
 <!-- ![Food Library](screenshots/library.png) -->
