@@ -1,86 +1,158 @@
-# Snackulator
+# Snackulator 🍽️
 
-> you eat it. you log it. you question your life choices.
+> A simple, privacy-focused nutrition tracker that keeps your food data local.
 
-**No account, no cloud, no sync, no drama — just a fast, privacy-first meal log for tracking calories, meals, and daily intake offline.**
+Snackulator is a lightweight, browser-based nutrition and calorie tracking application designed to make daily food logging simple and straightforward.
 
-Snackulator is a stupid-simple, local-first calorie tracker that lives entirely in a single HTML file.
-
-No installs. No accounts. No cloud. No “AI-powered insights”.  
-Just open the file and start logging what you ate.
+It runs directly from a single HTML file and does not require an account, backend, or database server. Your nutrition data is stored locally in your browser.
 
 ---
 
-## Why this exists
+## ✨ Features
 
-Because most calorie trackers:
-- want your email
-- want your data
-- want a subscription
-- want to tell you you're doing great
+### 📊 Nutrition Dashboard
 
-Snackulator wants none of that.
+Track your daily:
 
-It just quietly keeps score.
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Fiber
+- Water intake
+
+The dashboard provides a quick overview of your progress toward your daily nutrition targets.
+
+### 🍎 Food Logger
+
+Log foods you've added to your personal library and specify how much you consumed.
+
+Snackulator automatically calculates the corresponding:
+
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Fiber
+
+based on the quantity consumed.
+
+Foods can be assigned to different meal categories such as:
+
+- Breakfast
+- Lunch
+- Dinner
+- Snack
+- Miscellaneous
+
+### 📚 Personal Food Library
+
+Create and manage your own collection of foods.
+
+Each food can contain:
+
+- Food name
+- Serving unit
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Fiber
+
+The library also includes a search function to quickly find foods.
+
+### 💧 Water Tracking
+
+Track daily water intake and compare it against your personal hydration target.
+
+### 📅 History & Activity
+
+Review previously logged meals, nutrition totals, water intake, and activity over time.
+
+### 🎯 Custom Nutrition Targets
+
+Set your own daily targets for:
+
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Fiber
+- Water
+
+### 💾 Local Data Storage
+
+Snackulator stores application data locally in your browser.
+
+No account or cloud database is required.
+
+### 📤 Data Export & Import
+
+Export your data for backup and restore it later if needed.
+
+Supported export formats include:
+
+- JSON backup
+- CSV nutrition ledger
 
 ---
 
-## Features
+## 🔐 Privacy
 
-- single HTML file (yes, really)
-- works completely offline
-- zero dependencies
-- instant load (it’s literally just a file)
-- local storage only (your data stays with you)
-- minimal UI, no clutter
-- brutally honest logging experience
-- you can save meals which can be reused
-- streaks (based on calorie limit and daily protien goal)
-- logs everything from time to macros (currently Calories, Protiens, Fats, Fibers, Carbs, Water intake)
-- single click to export all your data so that you can back it up if you need to
+Snackulator is designed around a local-first approach.
 
----
+Your food logs, food library, targets, and other application data are stored in your browser's local storage.
 
-## How to use
+There is no Snackulator account system or application backend.
 
-1. download `index.html`
-2. open it in your browser
-3. start logging snacks like a responsible adult (or not)
+> Your data stays in the browser where you use the application.
 
-that’s it. no setup. no build step. no nonsense.
+Because the application relies on browser storage, clearing the site's local storage or browser data can remove your saved information.
+
+**Always keep an exported backup if your data is important.**
 
 ---
 
-## Philosophy
+## 🚀 Getting Started
 
-- if it needs a backend, it's already too much
-- if it needs login, it's definitely too much
-- if it needs a tutorial, something went wrong
+Snackulator does not require a build process.
 
-Snackulator is designed to be:
-> open → type → done
+### Option 1 — Run locally
 
----
+1. Download or clone this repository.
+2. Open `index.html` in a modern web browser.
+3. Start adding foods and logging meals.
 
-## Privacy
+### Option 2 — Use GitHub Pages
 
-your data:
-- is stored locally in your browser
-- never leaves your device
-- is not tracked, synced, or analyzed
-
-if you lose it, it's gone.  
-this is the price of freedom.
+The project can also be hosted as a static website because the application does not require a backend server.
 
 ---
 
-## Limitations
+## 🛠️ Technology
 
-- no sync across devices (ahm...maybe later?)
-- no fancy analytics (You don't need more analytics than this to follow a diet)
-- no reminders to stop eating (we are instead using human in-built notification system known as 'Guilt')
+Snackulator is intentionally lightweight.
 
-it will not fix your diet.  
-it will just document it.
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Browser Local Storage
+
+### Data Visualization
+
+- Chart.js
+
+The application is contained primarily within a single `index.html` file.
 
 ---
+
+## 📁 Project Structure
+
+```text
+Snackulator/
+│
+├── index.html      # Main application
+├── README.md       # Project documentation
+└── .gitignore      # Git configuration (if present)
