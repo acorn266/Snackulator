@@ -72,10 +72,16 @@ That's it. 🍴
 
 ---
 
+
 ## 👩‍💻 Author
 
-**Aastha**
+**Aastha** 
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aastha-karn-61876a298/)
 
 ---
 
-Built with ❤️
+<div align="center">
+Built with ❤️ 
+</div>
+
